@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Bolsa de Trabajo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+
+        function getUrlParams() {
+            const params = new URLSearchParams(window.location.search);
+            const empresa = params.get("empresa");
+            const direccion = params.get("direccion");
+
+            if (empresa && direccion) {
+                document.getElementById("empresa").value = empresa;
+                document.getElementById("direccion").value = direccion;
+            }
+        }
+
+        window.onload = getUrlParams;
+    </script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-blue-600 text-white py-4">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold">Bolsa de Trabajo</h1>
+            <ul class="flex gap-4">
+                <li><a href="/index.html" class="bg-black-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Inicio</a></li>
+                <li><a href="/pages/registro.html" class="bg-black-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Registro</a></li>
+                <li><a href="/pages/empleos.html" class="bg-black-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Buscar Empleos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="py-12">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+            <div class="space-y-4">
+                <h3 class="text-3xl font-bold">Contacto</h3>
+                <p>Por favor, completa este formulario para postularte a la vacante de trabajo.</p>
+                <form action="/enviar-formulario" method="POST" enctype="multipart/form-data">
+                    <div class="mb-4">
+                        <label for="nombre" class="block text-sm font-semibold">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" class="w-full p-2 mt-2 border rounded" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="correo" class="block text-sm font-semibold">Correo</label>
+                        <input type="email" id="correo" name="correo" class="w-full p-2 mt-2 border rounded" required>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="mensaje" class="block text-sm font-semibold">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" class="w-full p-2 mt-2 border rounded" rows="4" required></textarea>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="empresa" class="block text-sm font-semibold">Empresa</label>
+                        <input type="text" id="empresa" name="empresa" class="w-full p-2 mt-2 border rounded" readonly>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="direccion" class="block text-sm font-semibold">Dirección</label>
+                        <input type="text" id="direccion" name="direccion" class="w-full p-2 mt-2 border rounded" readonly>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="cv" class="block text-sm font-semibold">Currículum (PDF, Word, etc.)</label>
+                        <input type="file" id="cv" name="cv" class="w-full p-2 mt-2 border rounded" accept=".pdf,.docx,.doc">
+                    </div>
+
+                    <button type="submit" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>© 2024 Bolsa de Trabajo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>

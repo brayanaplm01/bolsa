@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - Bolsa de Trabajo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+    
+    <header class="bg-blue-600 text-white py-4">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold">Bolsa de Trabajo</h1>
+            <ul class="flex gap-4">
+                <li><a href="/index.html" class="bg-black-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Inicio</a></li>
+                <li><a href="/pages/registro.html" class="bg-black-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Registro</a></li>
+                <li><a href="/pages/empleos.html" class="bg-black-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Empleos disponibles</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <section class="bg-blue-100 py-20 fade-in-up">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-4">Encuentra el empleo de tus sueños</h2>
+            <p class="text-lg mb-8">Conecta con empresas de todo el país y encuentra oportunidades laborales que se adapten a tus habilidades.</p>
+            <a href="/pages/registro.html" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">¡Regístrate ahora!</a>
+        </div>
+    </section>
+
+    
+    <section class="py-12 fade-in-up">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+            <div class="space-y-4">
+                <h3 class="text-3xl font-bold">¿Quiénes somos?</h3>
+                <p>Somos una plataforma dedicada a conectar a los buscadores de empleo con las mejores empresas del mercado. Ofrecemos una experiencia fácil y eficiente para encontrar el trabajo perfecto.</p>
+                <p>Nuestra misión es empoderar a las personas a alcanzar su máximo potencial profesional.</p>
+            </div>
+            <img src="/assets/images/bolsa-de-trabajo.svg" alt="Bolsa de Trabajo" class="rounded shadow-lg">
+        </div>
+    </section>
+
+    <section class="py-12 fade-in-up">
+        <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 px-4">
+            <div class="space-y-4">
+                <h3 class="text-3xl font-bold">¿En qué nos enfocamos?</h3>
+                <p>Nos enfocamos en brindar el apoyo a personas en la búsqueda de empleo y a empresas que buscan a personas que se adecuen a sus necesidades específicas.</p>
+            </div>
+            <img src="/assets/images/que-es-una-bolsa-de-empleo-1024x361.svg" alt="Bolsa de Trabajo" class="rounded shadow-lg">
+        </div>
+    </section>
+
+    
+    <section class="bg-gray-200 py-12 fade-in-up">
+        <div class="container mx-auto text-center px-4">
+            <h3 class="text-3xl font-bold mb-8">¿Por qué elegirnos?</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded shadow">
+                    <h4 class="text-xl font-bold mb-2">Fácil de usar</h4>
+                    <p>Registra tus datos para recibir ofertas segun tus habilidades y años de experiencia</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h4 class="text-xl font-bold mb-2">Informacion de trabajos disponibles</h4>
+                    <p>Navega por ofertas de empleo de manera rápida y sencilla.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h4 class="text-xl font-bold mb-2">Conexión directa</h4>
+                    <p>Contacta directamente con la administacion de la empresa mediante correo.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h4 class="text-xl font-bold mb-2">Soporte constante</h4>
+                    <p>Te asistimos en cada paso para que encuentres tu trabajo ideal.</p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h4 class="text-xl font-bold mb-2">Ofertas exclusivas</h4>
+                    <p>Nuestra plataforma se asocia con empresas que publican ofertas de trabajo exclusivas solo para nuestros usuarios. </p>
+                </div>
+                <div class="bg-white p-6 rounded shadow">
+                    <h4 class="text-xl font-bold mb-2">Red de Networking Profesional</h4>
+                    <p>Al unirte a nuestra plataforma, no solo accedes a ofertas de trabajo, sino que también formas parte de una comunidad profesional vibrante. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-blue-600 text-white text-center fade-in-up">
+        <h3 class="text-3xl font-bold mb-4">¿Listo para comenzar?</h3>
+        <p class="mb-6">Regístra tus datos y comienza a postularte a las mejores ofertas laborales hoy mismo.</p>
+        <a href="/pages/registro.html" class="bg-white text-blue-600 py-2 px-6 rounded font-bold hover:bg-gray-100 transition duration-300">MANDA TUS DATOS AHORA</a>
+    </section>
+
+
+    <footer class="bg-gray-800 text-white py-6 fade-in-up">
+        <div class="container mx-auto text-center">
+            <p>© 2024 Bolsa de Trabajo. Todos los derechos reservados.</p>
+            <p class="text-sm">Hecho con dedicación para ayudar a las personas a encontrar empleo.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

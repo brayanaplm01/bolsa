@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empleos - Bolsa de Trabajo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        .spinner {
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top: 4px solid #3498db;
+            width: 50px;
+            height: 50px;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <header class="bg-blue-600 text-white py-4">
+        <nav class="container mx-auto flex justify-between items-center px-4">
+            <h1 class="text-2xl font-bold">Bolsa de Trabajo</h1>
+            <ul class="flex gap-4">
+                <li><a href="/index.html" class="bg-black-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Inicio</a></li>
+                <li><a href="/pages/registro.html" class="bg-black-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Registro</a></li>
+                <li><a href="/pages/empleos.html" class="bg-black-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition duration-300">Empleos disponibles</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold mb-6">Vacantes Disponibles</h2>
+
+            <div id="loading" class="flex justify-center mb-6">
+                <div class="spinner"></div>
+            </div>
+
+            <div id="empleos" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 hidden">
+
+                <div class="bg-white shadow-lg rounded-lg p-6 mb-6 fade-in-up">
+                    <h3 class="text-2xl font-semibold mb-2">Desarrollador Web</h3>
+                    <p class="text-gray-700 mb-4">Buscamos un desarrollador web con experiencia en tecnologías frontend y backend. Debe tener un conocimiento sólido de HTML, CSS, JavaScript y Node.js.</p>
+                    <ul class="list-disc pl-6 text-gray-600">
+                        <li>Experiencia mínima de 2 años.</li>
+                        <li>Conocimiento en bases de datos relacionales y no relacionales.</li>
+                        <li>Capacidad de trabajo en equipo.</li>
+                    </ul>
+                    <a href="/pages/contacto.html?empresa=TechCorp&direccion=Calle+Ficticia+123" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 mt-4 inline-block">Postúlate Ahora</a>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg p-6 mb-6 fade-in-up">
+                    <h3 class="text-2xl font-semibold mb-2">Diseñador Gráfico</h3>
+                    <p class="text-gray-700 mb-4">Se busca diseñador gráfico creativo y detallista, con experiencia en diseño de interfaces y materiales publicitarios. Dominio de herramientas como Photoshop e Illustrator.</p>
+                    <ul class="list-disc pl-6 text-gray-600">
+                        <li>Experiencia mínima de 3 años.</li>
+                        <li>Portfolio de trabajos previos.</li>
+                        <li>Capacidad de trabajar bajo presión.</li>
+                    </ul>
+                    <a href="/pages/contacto.html?empresa=Creativos+S.A.&direccion=Avenida+Principal+456" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 mt-4 inline-block">Postúlate Ahora</a>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg p-6 mb-6 fade-in-up">
+                    <h3 class="text-2xl font-semibold mb-2">Gerente de Marketing</h3>
+                    <p class="text-gray-700 mb-4">Buscamos un gerente de marketing con experiencia en campañas digitales, SEO y estrategias de contenido. Debe ser capaz de liderar un equipo y gestionar presupuestos de marketing.</p>
+                    <ul class="list-disc pl-6 text-gray-600">
+                        <li>Experiencia mínima de 5 años.</li>
+                        <li>Conocimiento en herramientas de análisis de datos y campañas publicitarias.</li>
+                        <li>Excelentes habilidades de comunicación.</li>
+                    </ul>
+                    <a href="/pages/contacto.html?empresa=MarketMasters&direccion=Plaza+Central+789" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 mt-4 inline-block">Postúlate Ahora</a>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg p-6 mb-6 fade-in-up">
+                    <h3 class="text-2xl font-semibold mb-2">Analista de Datos</h3>
+                    <p class="text-gray-700 mb-4">Se requiere analista de datos con experiencia en el manejo de herramientas como Excel, SQL y Power BI para generar reportes y análisis de datos de la empresa.</p>
+                    <ul class="list-disc pl-6 text-gray-600">
+                        <li>Experiencia mínima de 2 años.</li>
+                        <li>Conocimiento en estadísticas y análisis de datos.</li>
+                        <li>Habilidad para trabajar con grandes volúmenes de información.</li>
+                    </ul>
+                    <a href="/pages/contacto.html?empresa=DataCorp&direccion=Avenida+XYZ+123" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 mt-4 inline-block">Postúlate Ahora</a>
+                </div>
+
+                <div class="bg-white shadow-lg rounded-lg p-6 mb-6 fade-in-up">
+                    <h3 class="text-2xl font-semibold mb-2">Community Manager</h3>
+                    <p class="text-gray-700 mb-4">Estamos buscando un community manager para gestionar las redes sociales de la empresa, crear contenido y analizar el rendimiento de las publicaciones.</p>
+                    <ul class="list-disc pl-6 text-gray-600">
+                        <li>Experiencia mínima de 3 años.</li>
+                        <li>Conocimiento en herramientas de redes sociales y métricas.</li>
+                        <li>Habilidad para crear contenido visual atractivo.</li>
+                    </ul>
+                    <a href="/pages/contacto.html?empresa=SocialMedia+S.A.&direccion=Calle+Redes+789" class="bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 mt-4 inline-block">Postúlate Ahora</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="container mx-auto text-center">
+            <p>© 2024 Bolsa de Trabajo. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('loading').classList.add('hidden');
+                document.getElementById('empleos').classList.remove('hidden');
+                const empleos = document.querySelectorAll('.fade-in-up');
+                empleos.forEach((empleo, index) => {
+                    setTimeout(() => {
+                        empleo.classList.add('fade-in-up');
+                    }, index * 300);
+                });
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
